@@ -4,14 +4,12 @@ import java.util.*
 
 class CipherData {
 
-
     fun cipherData(plainText: String): Array<String> {
+        val buffer = StringBuilder()
         val key = UUID.randomUUID().toString()
         val keySplit = key.split("-")
-        val buffer = StringBuilder()
-        keySplit.forEach {
-            buffer.append(it)
-        }
+
+        keySplit.forEach { buffer.append(it) }
         val keyBytes = buffer.toString().toByteArray(charset("UTF-8"))
         val ivBytes = ByteArray(16)
 
@@ -29,7 +27,3 @@ class CipherData {
         return stringArray
     }
 }
-
-
-
-
