@@ -7,11 +7,12 @@
 ```ruby
 class CipherData
 
-        val buffer = StringBuilder()
-        val key = UUID.randomUUID().toString()
-        val keySplit = key.split("-")
-        val ivBytes = ByteArray(16)
-        keySplit.forEach { buffer.append(it) }
+val buffer = StringBuilder()
+val key = UUID.randomUUID().toString()
+val keySplit = key.split("-")
+
+val ivBytes = ByteArray(16)
+keySplit.forEach { buffer.append(it) }
 ```
 
 ### Returns the encryption processing string.
