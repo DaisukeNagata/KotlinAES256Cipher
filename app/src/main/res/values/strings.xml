@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AES256Cipher</string>
+    <string name="button">Button</string>
+    <string name="hint">input</string>
+</resources>
