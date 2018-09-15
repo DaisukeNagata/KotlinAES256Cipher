@@ -5,21 +5,26 @@
 
 ### generate an unspecified UUID and set the key.
 ```ruby
- val key = UUID.randomUUID().toString()
-        val keySplit = key.split("-")
+class CipherData
+
         val buffer = StringBuilder()
-        keySplit.forEach {
-            buffer.append(it)
-        }
+        val key = UUID.randomUUID().toString()
+        val keySplit = key.split("-")
+        val ivBytes = ByteArray(16)
+        keySplit.forEach { buffer.append(it) }
 ```
 
 ### Returns the encryption processing string.
 ```ruby
+class MainActivity : AppCompatActivity()
+
 CipherData().cipherData(edit_text.text.toString())[0]
 ```
 
 ### Returns the decryption processing string.
 ```ruby
+class MainActivity : AppCompatActivity() 
+
 CipherData().cipherData(edit_text.text.toString())[1]
 ```
 
