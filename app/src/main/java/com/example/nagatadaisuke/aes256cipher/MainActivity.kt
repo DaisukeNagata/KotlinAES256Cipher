@@ -9,8 +9,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val textArray: ArrayList<String> = arrayListOf("Test", edit_text.text.toString())
-
         button.setOnClickListener {
             if (edit_text.text != null) {
                 val textArray: ArrayList<String> = arrayListOf("Test", edit_text.text.toString())
