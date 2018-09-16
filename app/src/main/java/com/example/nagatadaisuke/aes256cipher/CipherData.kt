@@ -16,8 +16,9 @@ class CipherData {
         var base64Text: String
         var cipherData: ByteArray
 
-        cipherData = AES256Cipher.encrypt(ivBytes, keyBytes, textArray[0].toByteArray(charset("UTF-8")))
+        cipherData = AES256Cipher.encrypt(ivBytes, keyBytes, textArray.contentToString().toByteArray(charset("UTF-8")))
         base64Text = Base64.getEncoder().encodeToString(cipherData)
+
         cipherData = AES256Cipher.decrypt(ivBytes, keyBytes, Base64.getDecoder().decode(base64Text))
 
         val stringArray: Array<String> = arrayOf(base64Text, String(cipherData))

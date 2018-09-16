@@ -12,7 +12,8 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             if(edit_text.text != null){
-                text_view.text = CipherData().cipherData(arrayOf(edit_text.text.toString()))[0]
+                val textArray : Array<String> = arrayOf("Test", edit_text.text.toString())
+                text_view.text = CipherData().cipherData(textArray)[0]
             }
         }
     }
