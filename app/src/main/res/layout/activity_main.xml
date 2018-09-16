@@ -38,6 +38,35 @@
             android:text="@string/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/edit_text2"
+            android:hint="@string/hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#ffffff"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/button2"
+            android:text="@string/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/edit_text3"
+            android:hint="@string/hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#ffffff"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/button3"
+            android:text="@string/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout >
 
 </android.support.constraint.ConstraintLayout>

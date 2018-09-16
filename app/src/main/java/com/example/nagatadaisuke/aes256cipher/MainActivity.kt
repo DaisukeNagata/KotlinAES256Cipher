@@ -9,11 +9,22 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val textArray: ArrayList<String> = arrayListOf("Test", edit_text.text.toString())
 
         button.setOnClickListener {
-            if(edit_text.text != null){
-                val textArray : Array<String> = arrayOf("Test", edit_text.text.toString())
-                text_view.text = CipherData().cipherData(textArray)[0]
+            if (edit_text.text != null) {
+                val textArray: ArrayList<String> = arrayListOf("Test", edit_text.text.toString())
+                text_view.text = CipherData().cipherData(textArray)[EnumCount.Test.number]  }
+        }
+        button2.setOnClickListener {
+            if (edit_text2.text != null) {
+                val textArray: ArrayList<String> = arrayListOf("Test", edit_text2.text.toString())
+                text_view.text = CipherData().cipherData(textArray)[EnumCount.Value.number] }
+        }
+        button3.setOnClickListener {
+            if(edit_text3.text != null) {
+                val textArray: Array<String> = arrayOf(edit_text3.text.toString())
+                text_view.text = CipherData().decrypt(textArray)[EnumCount.Decrypt.number]
             }
         }
     }
