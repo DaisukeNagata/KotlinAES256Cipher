@@ -15,22 +15,27 @@ val ivBytes = ByteArray(16)
 keySplit.forEach { buffer.append(it) }
 ```
 
-### Returns the encryption processing string.
+### The value of the specified element is returned.
 ```ruby
 class MainActivity : AppCompatActivity()
 
-CipherData().cipherData(edit_text.text.toString())[0]
+text_view.text = CipherData().cipherData(textArray)[EnumCount.Test.number]
 ```
 
-### Returns the value as an array type.
+### The entered value is returned.
+```ruby
+class MainActivity : AppCompatActivity()
+
+text_view.text = CipherData().cipherData(textArray)[EnumCount.Value.number]
+```
+
+### Returns the encrypted value.
 
 ```ruby
 class MainActivity : AppCompatActivity() 
 
 CipherData().cipherData(edit_text.text.toString()) 
 ```
-
-<img src="https://github.com/daisukenagata/KotlinAES256Cipher/blob/master/photo.png?raw=true" width="340px" height="720px">
 
 # GIF
 ![](https://github.com/daisukenagata/KotlinAES256Cipher/blob/master/movie.gif?raw=true)
