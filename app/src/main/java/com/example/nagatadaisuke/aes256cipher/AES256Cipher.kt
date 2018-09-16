@@ -13,7 +13,7 @@ import java.security.InvalidAlgorithmParameterException
 
 object AES256Cipher {
 
-    @Throws(java.io.UnsupportedEncodingException::class, NoSuchAlgorithmException::class, NoSuchPaddingException::class, InvalidKeyException::class, InvalidAlgorithmParameterException::class, IllegalBlockSizeException::class, BadPaddingException::class)
+
     fun encrypt(ivBytes: ByteArray, keyBytes: ByteArray, textBytes: ByteArray): ByteArray {
 
         val ivSpec = IvParameterSpec(ivBytes)
@@ -28,7 +28,6 @@ object AES256Cipher {
         return cipher.doFinal(textBytes)
     }
 
-    @Throws(java.io.UnsupportedEncodingException::class, NoSuchAlgorithmException::class, NoSuchPaddingException::class, InvalidKeyException::class, InvalidAlgorithmParameterException::class, IllegalBlockSizeException::class, BadPaddingException::class)
     fun decrypt(ivBytes: ByteArray, keyBytes: ByteArray, textBytes: ByteArray): ByteArray {
 
         val ivSpec = IvParameterSpec(ivBytes)

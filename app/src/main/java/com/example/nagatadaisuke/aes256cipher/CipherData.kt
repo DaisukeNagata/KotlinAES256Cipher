@@ -9,9 +9,9 @@ class CipherData {
         val key = UUID.randomUUID().toString()
         val keySplit = key.split("-")
 
+        val ivBytes = ByteArray(16)
         keySplit.forEach { buffer.append(it) }
         val keyBytes = buffer.toString().toByteArray(charset("UTF-8"))
-        val ivBytes = ByteArray(16)
 
         var plain = plainText
         var cipherData: ByteArray
