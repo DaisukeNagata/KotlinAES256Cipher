@@ -23,11 +23,14 @@ CipherData().cipherData(edit_text.text.toString())[0]
 ```
 
 ### Returns the value as an array type.
+
 ```ruby
 class MainActivity : AppCompatActivity() 
 
-CipherData().cipherData(edit_text.text.toString())[1]
+CipherData().cipherData(edit_text.text.toString())[1] 
 ```
+
+<img src="https://github.com/daisukenagata/KotlinAES256Cipher/blob/master/photo.png?raw=true" width="340px" height="720px">
 
 # GIF
 ![](https://github.com/daisukenagata/KotlinAES256Cipher/blob/master/movie.gif?raw=true)
