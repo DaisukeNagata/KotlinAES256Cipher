@@ -4,7 +4,7 @@ import java.util.*
 
 class CipherData {
 
-    fun cipherData(plainText: String): Array<String> {
+    fun cipherData(textArray: Array<String>): Array<String> {
         val buffer = StringBuilder()
         val key = UUID.randomUUID().toString()
         val keySplit = key.split("-")
@@ -13,17 +13,14 @@ class CipherData {
         keySplit.forEach { buffer.append(it) }
         val keyBytes = buffer.toString().toByteArray(charset("UTF-8"))
 
-        var plain = plainText
-        var cipherData: ByteArray
         var base64Text: String
+        var cipherData: ByteArray
 
-        cipherData = AES256Cipher.encrypt(ivBytes, keyBytes, plainText.toByteArray(charset("UTF-8")))
+        cipherData = AES256Cipher.encrypt(ivBytes, keyBytes, textArray[0].toByteArray(charset("UTF-8")))
         base64Text = Base64.getEncoder().encodeToString(cipherData)
-
         cipherData = AES256Cipher.decrypt(ivBytes, keyBytes, Base64.getDecoder().decode(base64Text))
-        plain = String(cipherData)
 
-        val stringArray: Array<String> = arrayOf(base64Text, plain)
+        val stringArray: Array<String> = arrayOf(base64Text, String(cipherData))
         return stringArray
     }
 }

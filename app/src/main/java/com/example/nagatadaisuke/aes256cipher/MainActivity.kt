@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             if(edit_text.text != null){
-                text_view.text = CipherData().cipherData(edit_text.text.toString())[0]
+                text_view.text = CipherData().cipherData(arrayOf(edit_text.text.toString()))[0]
             }
         }
     }
