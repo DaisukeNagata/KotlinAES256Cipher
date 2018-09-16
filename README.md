@@ -27,7 +27,7 @@ CipherData().cipherData(edit_text.text.toString())[0]
 ```ruby
 class MainActivity : AppCompatActivity() 
 
-CipherData().cipherData(edit_text.text.toString())[1] 
+CipherData().cipherData(edit_text.text.toString()) 
 ```
 
 <img src="https://github.com/daisukenagata/KotlinAES256Cipher/blob/master/photo.png?raw=true" width="340px" height="720px">
