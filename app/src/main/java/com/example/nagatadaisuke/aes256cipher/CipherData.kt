@@ -11,12 +11,12 @@ class CipherData {
 
         val ivBytes = ByteArray(16)
         keySplit.forEach { buffer.append(it) }
-        val keyBytes = buffer.toString().toByteArray(charset("UTF-8"))
 
+        val keyBytes = buffer.toString().toByteArray(charset("UTF-8"))
         var base64Text: String
         var cipherData: ByteArray
 
-        cipherData = AES256Cipher.encrypt(ivBytes, keyBytes, textArray[0].toByteArray(charset("UTF-8")))
+        cipherData = AES256Cipher.encrypt(ivBytes, keyBytes, textArray.toString().toByteArray())
         base64Text = Base64.getEncoder().encodeToString(cipherData)
         cipherData = AES256Cipher.decrypt(ivBytes, keyBytes, Base64.getDecoder().decode(base64Text))
 

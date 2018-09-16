@@ -8,7 +8,6 @@ import javax.crypto.spec.SecretKeySpec
 object AES256Cipher {
 
     fun encrypt(ivBytes: ByteArray, keyBytes: ByteArray, textBytes: ByteArray): ByteArray {
-
         val ivSpec = IvParameterSpec(ivBytes)
         val newKey = SecretKeySpec(keyBytes, "AES")
         var cipher: Cipher? = null
