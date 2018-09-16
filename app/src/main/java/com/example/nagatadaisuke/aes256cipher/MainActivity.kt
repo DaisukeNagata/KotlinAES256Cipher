@@ -1,11 +1,11 @@
 package com.example.nagatadaisuke.aes256cipher
 
+import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,6 +23,13 @@ class MainActivity : AppCompatActivity() {
             if(edit_text3.text != null) {
                 val textArray: Array<String> = arrayOf(edit_text3.text.toString())
                 text_view.text = CipherData().decrypt(textArray)[EnumCount.Decrypt.number]
+            }
+        }
+        button4.setOnClickListener {
+            if(edit_text4.text != null) {
+                val textArray: ArrayList<String> = arrayListOf("Test",edit_text4.text.toString())
+                CipherData().saveText(this, "abc", textArray)
+                text_view.text = CipherData().loadText(this, "abc").toString()
             }
         }
     }

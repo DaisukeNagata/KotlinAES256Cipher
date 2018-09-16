@@ -1,14 +1,19 @@
 package com.example.nagatadaisuke.aes256cipher
 
-import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
-import java.util.zip.Inflater
+import android.content.Context
+import android.preference.PreferenceManager
+import org.json.JSONArray
+import org.json.JSONException
+import android.text.TextUtils
+
 
 class CipherData {
 
+    val key = UUID.randomUUID().toString()
     fun cipherData(textArray: ArrayList<String>): Array<String> {
         val buffer = StringBuilder()
-        val key = UUID.randomUUID().toString()
+
         val keySplit = key.split("-")
 
         val ivBytes = ByteArray(16)
@@ -30,7 +35,6 @@ class CipherData {
 
     fun decrypt(textArray: Array<String>): Array<String> {
         val buffer = StringBuilder()
-        val key = UUID.randomUUID().toString()
         val keySplit = key.split("-")
 
         val ivBytes = ByteArray(16)
@@ -44,5 +48,27 @@ class CipherData {
         base64Text = Base64.getEncoder().encodeToString(cipherData)
 
         return arrayOf(base64Text)
+    }
+
+    fun saveText(context: Context?, key: String, items: ArrayList<String>) {
+        val json = JSONArray(items).toString()
+        val pref = PreferenceManager.getDefaultSharedPreferences(context)
+        pref.edit().putString(key, json).commit()
+    }
+
+    fun loadText(context: Context?, key: String): ArrayList<String> {
+        val items = ArrayList<String>()
+        val pref = PreferenceManager.getDefaultSharedPreferences(context)
+        val json = pref.getString(key, "")
+        if (!TextUtils.isEmpty(json)) {
+            try {
+                val arr = JSONArray(json)
+                for (i in 0 until arr.length()) {
+                    items.add(arr.getString(i))
+                }
+            } catch (e: JSONException) {
+            }
+        }
+        return items
     }
 }

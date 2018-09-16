@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="30sp"
-            android:layout_margin="20dp"
+            android:layout_margin="5dp"
             android:gravity="center" />
 
         <EditText
@@ -64,6 +64,20 @@
 
         <Button
             android:id="@+id/button3"
+            android:text="@string/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/edit_text4"
+            android:hint="@string/hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#ffffff"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/button4"
             android:text="@string/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
