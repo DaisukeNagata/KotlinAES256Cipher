@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity()
 CipherData().cipherData(edit_text.text.toString())[0]
 ```
 
-### Returns the decryption processing string.
+### Returns the value as an array type.
 ```ruby
 class MainActivity : AppCompatActivity() 
 
