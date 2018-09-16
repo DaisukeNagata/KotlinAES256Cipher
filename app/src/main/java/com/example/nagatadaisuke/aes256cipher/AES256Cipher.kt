@@ -1,18 +1,11 @@
 package com.example.nagatadaisuke.aes256cipher
 
-import javax.crypto.BadPaddingException
 import javax.crypto.Cipher
-import javax.crypto.IllegalBlockSizeException
-import javax.crypto.NoSuchPaddingException
 import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
-import java.security.InvalidKeyException
-import java.security.NoSuchAlgorithmException
-import java.security.InvalidAlgorithmParameterException
 
 
 object AES256Cipher {
-
 
     fun encrypt(ivBytes: ByteArray, keyBytes: ByteArray, textBytes: ByteArray): ByteArray {
 
