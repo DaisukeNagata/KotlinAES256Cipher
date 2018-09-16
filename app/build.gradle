@@ -13,8 +13,8 @@ uploadArchives {
         mavenDeployer {
             repository url: "file://${repo.absolutePath}"
             pom.version = '1.0.0'
-            pom.groupId = 'com.dbank0208.aes256cipher'
-            pom.artifactId = 'aes256cipher'
+            pom.groupId = 'com.dbank0208.aes256ciphers'
+            pom.artifactId = 'aes256ciphers'
         }
     }
 }
