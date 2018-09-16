@@ -16,7 +16,7 @@ class CipherData {
         var base64Text: String
         var cipherData: ByteArray
 
-        cipherData = AES256Cipher.encrypt(ivBytes, keyBytes, textArray.toString().toByteArray())
+        cipherData = AES256Cipher.encrypt(ivBytes, keyBytes, textArray[0].toByteArray(charset("UTF-8")))
         base64Text = Base64.getEncoder().encodeToString(cipherData)
         cipherData = AES256Cipher.decrypt(ivBytes, keyBytes, Base64.getDecoder().decode(base64Text))
 
