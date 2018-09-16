@@ -3,6 +3,10 @@
 #### com.android.tools.build:gradle:3.1.3
 #### minSdkVersion 26 ~ targetSdkVersion 28
 
+## how to build.gradle
+
+#### apply plugin: 'com.android.library' -> apply plugin: 'com.android.application'
+
 ## Introduction
 
 #### Two EditText set values in array.
