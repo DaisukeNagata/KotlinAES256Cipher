@@ -3,6 +3,15 @@
 #### com.android.tools.build:gradle:3.1.3
 #### minSdkVersion 26 ~ targetSdkVersion 28
 
+## Introduction
+
+#### Two EditText set values in array.
+#### One decrypts it with a fixed Test.
+#### The second is decrypting with the entered value.
+#### The third one encrypts the entered value.
+
+
+## Method introduction
 ### generate an unspecified UUID and set the key.
 ```ruby
 class CipherData
@@ -14,7 +23,6 @@ val keySplit = key.split("-")
 val ivBytes = ByteArray(16)
 keySplit.forEach { buffer.append(it) }
 ```
-
 ### The value of the specified element is returned.
 ```ruby
 class MainActivity : AppCompatActivity()
