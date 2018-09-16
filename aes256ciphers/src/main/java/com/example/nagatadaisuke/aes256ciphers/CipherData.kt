@@ -1,16 +1,19 @@
-package com.example.nagatadaisuke.aes256cipher
+package com.example.nagatadaisuke.aes256ciphers
 
-import java.util.*
 import android.content.Context
 import android.preference.PreferenceManager
+import android.text.TextUtils
 import org.json.JSONArray
 import org.json.JSONException
-import android.text.TextUtils
+import java.util.Base64
+import java.util.UUID
+import kotlin.collections.ArrayList
 
-
-class CipherData {
+class CipherData() {
 
     val key = UUID.randomUUID().toString()
+
+
     fun cipherData(textArray: ArrayList<String>): Array<String> {
         val buffer = StringBuilder()
 
@@ -72,3 +75,4 @@ class CipherData {
         return items
     }
 }
+

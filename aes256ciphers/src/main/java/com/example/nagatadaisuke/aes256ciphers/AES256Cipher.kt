@@ -1,9 +1,9 @@
-package com.example.nagatadaisuke.aes256cipher
+package com.example.nagatadaisuke.aes256ciphers
 
+import java.sql.DriverManager.println
 import javax.crypto.Cipher
 import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
-
 
 object AES256Cipher {
 
@@ -29,6 +29,7 @@ object AES256Cipher {
             cipher.init(Cipher.DECRYPT_MODE, newKey, ivSpec)
         } catch (e: Exception) {
             println(e.message)
+
         }
         return cipher.doFinal(textBytes)
     }

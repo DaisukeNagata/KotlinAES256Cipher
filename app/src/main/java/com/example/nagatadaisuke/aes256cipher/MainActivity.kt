@@ -1,9 +1,11 @@
 package com.example.nagatadaisuke.aes256cipher
 
-import android.content.Context
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import com.example.nagatadaisuke.aes256ciphers.CipherData
+import com.example.nagatadaisuke.aes256ciphers.EnumCount
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,6 +15,7 @@ class MainActivity : AppCompatActivity() {
             if (edit_text.text != null) {
                 val textArray: ArrayList<String> = arrayListOf("Test", edit_text.text.toString())
                 text_view.text = CipherData().cipherData(textArray)[EnumCount.Test.number]  }
+            val sss = String()
         }
         button2.setOnClickListener {
             if (edit_text2.text != null) {
