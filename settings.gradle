@@ -1,1 +1,1 @@
-include ':app', ':aes256ciphers'
+include ':app', ':aes256ciphers', ':aes256ciphers-debug'
