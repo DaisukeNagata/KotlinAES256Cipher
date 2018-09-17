@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
             if (edit_text.text != null) {
                 val textArray: ArrayList<String> = arrayListOf("Test", edit_text.text.toString())
                 text_view.text = CipherData().cipherData(textArray)[EnumCount.Test.number]  }
-            val sss = String()
         }
         button2.setOnClickListener {
             if (edit_text2.text != null) {
