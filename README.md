@@ -1,5 +1,7 @@
 # KotlinAES256Cipher
-
+ <a href='https://bintray.com/dbank0208/maven/aes256ciphers?source=watch' alt='Get automatic notifications about new "aes256ciphers" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_color.png'></a>
+ 
+ [ ![Download](https://api.bintray.com/packages/dbank0208/maven/aes256ciphers/images/download.svg) ](https://bintray.com/dbank0208/maven/aes256ciphers/_latestVersion)
 #### com.android.tools.build:gradle:3.1.4
 #### minSdkVersion 26 ~ targetSdkVersion 28
 
