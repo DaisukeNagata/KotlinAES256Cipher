@@ -9,7 +9,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/aes256ciphers" />
-            <option value="$PROJECT_DIR$/aes256ciphers-debug" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
