@@ -1,11 +1,60 @@
 # KotlinAES256Cipher
 
-#### com.android.tools.build:gradle:3.1.3
+#### com.android.tools.build:gradle:3.1.4
 #### minSdkVersion 26 ~ targetSdkVersion 28
 
 ## how to build.gradle
 
 #### apply plugin: 'com.android.library' -> apply plugin: 'com.android.application'
+
+## Incorporation method as external library
+
+1. Entering terminal commands
+```ruby
+git submodule add https://github.com/daisukenagata/KotlinAES256Cipher.git
+
+git submodule init
+
+git subnodule update
+```
+
+2. Move aar file under libs
+```
+app/
+   libs/
+       add-> aes256ciphers-debug.aar
+```
+
+3.
+```ruby
+allprojects {
+    repositories {
+        jcenter()
+        // add
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+```
+
+4. And SyncProject
+```ruby
+dependencies {
+ 
+    // add
+    implementation project(':aes256ciphers-debug')
+}
+```
+
+5. For the source code please refer to the library project
+```ruby
+1. MainActivity
+2. activity_main.xml
+3. strings.xml
+
+```
+
 
 ## Introduction
 
