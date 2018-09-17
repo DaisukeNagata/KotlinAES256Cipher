@@ -4,21 +4,6 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
-def repo = new File(rootDir, "repository")
-
-apply plugin: "maven"
-
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository url: "file://${repo.absolutePath}"
-            pom.version = '1.0.0'
-            pom.groupId = 'com.dbank0208'
-            pom.artifactId = 'aes256ciphers'
-        }
-    }
-}
-
 android {
     compileSdkVersion 28
     defaultConfig {
