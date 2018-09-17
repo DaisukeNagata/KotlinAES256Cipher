@@ -1,6 +1,6 @@
 # KotlinAES256Cipher
 
-#### com.android.tools.build:gradle:3.1.3
+#### com.android.tools.build:gradle:3.1.4
 #### minSdkVersion 26 ~ targetSdkVersion 28
 
 ## how to build.gradle
