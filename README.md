@@ -1,61 +1,18 @@
 # KotlinAES256Cipher
- <a href='https://bintray.com/dbank0208/maven/aes256ciphers?source=watch' alt='Get automatic notifications about new "aes256ciphers" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_color.png'></a>
  
- [ ![Download](https://api.bintray.com/packages/dbank0208/maven/aes256ciphers/images/download.svg) ](https://bintray.com/dbank0208/maven/aes256ciphers/_latestVersion)
+<a href='https://bintray.com/dbank0208/maven/KotlinAES256Cipher?source=watch' alt='Get automatic notifications about new "KotlinAES256Cipher" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_color.png'></a>[ ![Download](https://api.bintray.com/packages/dbank0208/maven/KotlinAES256Cipher/images/download.svg) ](https://bintray.com/dbank0208/maven/KotlinAES256Cipher/_latestVersion) 
+ 
+https://bintray.com/dbank0208/maven/KotlinAES256Cipher/1.0.2
+
+
+#### gradle add
+
+```ruby
+implementation 'com.dbank0208.KotlinAES256Cipher:KotlinAES256Cipher:1.0.2'
+```
+
 #### com.android.tools.build:gradle:3.1.4
 #### minSdkVersion 26 ~ targetSdkVersion 28
-
-## how to build.gradle
-
-#### apply plugin: 'com.android.library' -> apply plugin: 'com.android.application'
-
-## Incorporation method as external library
-
-1. Entering terminal commands
-```ruby
-git submodule add https://github.com/daisukenagata/KotlinAES256Cipher.git
-
-git submodule init
-
-git subnodule update
-```
-
-2. Move aar file under libs
-```
-app/
-   libs/
-       add-> aes256ciphers-debug.aar
-```
-
-3.
-```ruby
-allprojects {
-    repositories {
-        jcenter()
-        // add
-        flatDir {
-            dirs 'libs'
-        }
-    }
-}
-```
-
-4. And SyncProject
-```ruby
-dependencies {
- 
-    // add
-    implementation project(':aes256ciphers-debug')
-}
-```
-
-5. For the source code please refer to the library project
-```ruby
-1. MainActivity
-2. activity_main.xml
-3. strings.xml
-
-```
 
 
 ## Introduction
