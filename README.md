@@ -1,8 +1,16 @@
 # KotlinAES256Cipher
+
+#### com.android.tools.build:gradle:3.1.4
+#### minSdkVersion 26 ~ targetSdkVersion 28
  
-<a href='https://bintray.com/dbank0208/maven/KotlinAES256Cipher?source=watch' alt='Get automatic notifications about new "KotlinAES256Cipher" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_color.png'></a>[ ![Download](https://api.bintray.com/packages/dbank0208/maven/KotlinAES256Cipher/images/download.svg) ](https://bintray.com/dbank0208/maven/KotlinAES256Cipher/_latestVersion) 
+[ ![Download](https://api.bintray.com/packages/dbank0208/maven/KotlinAES256Cipher/images/download.svg) ](https://bintray.com/dbank0208/maven/KotlinAES256Cipher/_latestVersion) 
+ 
+
  
 https://bintray.com/dbank0208/maven/KotlinAES256Cipher/1.0.2
+
+
+
 
 
 #### gradle add
@@ -11,8 +19,6 @@ https://bintray.com/dbank0208/maven/KotlinAES256Cipher/1.0.2
 implementation 'com.dbank0208.KotlinAES256Cipher:KotlinAES256Cipher:1.0.2'
 ```
 
-#### com.android.tools.build:gradle:3.1.4
-#### minSdkVersion 26 ~ targetSdkVersion 28
 
 
 ## Introduction
