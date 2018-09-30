@@ -1,4 +1,4 @@
-package com.example.nagatadaisuke.aes256ciphers
+package com.dbank.KotlinAES256Cipher
 
 import android.content.Context
 import android.preference.PreferenceManager

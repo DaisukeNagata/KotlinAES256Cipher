@@ -1,4 +1,4 @@
-package com.example.nagatadaisuke.aes256ciphers
+package com.dbank.KotlinAES256Cipher
 
 import java.sql.DriverManager.println
 import javax.crypto.Cipher

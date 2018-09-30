@@ -1,4 +1,4 @@
-package com.example.nagatadaisuke.aes256ciphers
+package com.dbank.KotlinAES256Cipher
 
 enum class EnumCount(val number: Int) {
     Test(0),
