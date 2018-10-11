@@ -25,7 +25,6 @@ implementation 'com.dbank0208.KotlinAES256Cipher:KotlinAES256Cipher:1.0.3'
 ```
 
 
-
 ## Introduction
 
 #### Two EditText set values in array.
@@ -33,6 +32,10 @@ implementation 'com.dbank0208.KotlinAES256Cipher:KotlinAES256Cipher:1.0.3'
 #### The second is decrypting with the entered value.
 #### The third one encrypts the entered value.
 
+#### Please change the value of gradle
+```ruby
+apply plugin: 'com.android.library'-> apply plugin: 'com.android.application'
+```
 
 ## Method introduction
 ### generate an unspecified UUID and set the key.
@@ -69,4 +72,4 @@ CipherData().cipherData(edit_text.text.toString())
 ```
 
 # GIF
-![](https://github.com/daisukenagata/KotlinAES256Cipher/blob/master/movie.gif?raw=true)
+![](https://github.com/daisukenagata/KotlinAES256Cipher/blob/master/Movie.gif?raw=true)
