@@ -79,4 +79,4 @@ text_view.text = CipherData().decrypt(textArray,EnumCount.Decrypt.number,key)
 CipherData().saveText(this, key, textArray)
 text_view.text = CipherData().loadText(this, key).toString()
 # GIF
-![](https://github.com/daisukenagata/KotlinAES256Cipher/blob/master/Movie2.gif?raw=true)
+![](https://github.com/daisukenagata/KotlinAES256Cipher/blob/master/Movie3.gif)
