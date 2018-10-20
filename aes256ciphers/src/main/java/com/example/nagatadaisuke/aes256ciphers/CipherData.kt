@@ -11,12 +11,8 @@ import kotlin.collections.ArrayList
 
 class CipherData() {
 
-    val key = UUID.randomUUID().toString()
-
-
-    fun cipherData(textArray: ArrayList<String>): Array<String> {
+    fun cipherData(textArray: ArrayList<String>,key: String): Array<String> {
         val buffer = StringBuilder()
-
         val keySplit = key.split("-")
 
         val ivBytes = ByteArray(16)
@@ -35,8 +31,7 @@ class CipherData() {
 
         return textArray.toArray(array)
     }
-
-    fun decrypt(textArray: Array<String>): Array<String> {
+    fun encrypt(textArray: Array<String>,type: Int, key: String): String {
         val buffer = StringBuilder()
         val keySplit = key.split("-")
 
@@ -47,10 +42,27 @@ class CipherData() {
         var base64Text: String
         var cipherData: ByteArray
 
-        cipherData = AES256Cipher.encrypt(ivBytes, keyBytes, textArray.contentToString().toByteArray(charset("UTF-8")))
+        cipherData = AES256Cipher.encrypt(ivBytes, keyBytes, textArray[type].toByteArray(charset("UTF-8")))
         base64Text = Base64.getEncoder().encodeToString(cipherData)
 
-        return arrayOf(base64Text)
+        return base64Text
+    }
+
+    fun decrypt(textArray: Array<String>,type: Int, key: String): String {
+        val buffer = StringBuilder()
+        val keySplit = key.split("-")
+
+        val ivBytes = ByteArray(16)
+        keySplit.forEach { buffer.append(it) }
+
+        val keyBytes = buffer.toString().toByteArray(charset("UTF-8"))
+        var base64Text: String
+        var cipherData: ByteArray
+
+        cipherData = AES256Cipher.decrypt(ivBytes, keyBytes, Base64.getDecoder().decode(textArray[type]))
+        val cipherSt = String(cipherData)
+
+        return cipherSt
     }
 
     fun saveText(context: Context?, key: String, items: ArrayList<String>) {
@@ -75,4 +87,3 @@ class CipherData() {
         return items
     }
 }
-
