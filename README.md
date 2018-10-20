@@ -1,7 +1,7 @@
 # KotlinAES256Cipher
 
 #### com.android.tools.build:gradle:3.1.4
-#### minSdkVersion 26 ~ targetSdkVersion 28
+#### minSdkVersion 22 ~ targetSdkVersion 28
 
 
 
@@ -12,7 +12,7 @@
  
 
  
-https://bintray.com/dbank0208/maven/KotlinAES256Cipher/1.0.3
+https://bintray.com/dbank0208/maven/KotlinAES256Cipher/1.0.4
 
 
 
@@ -21,7 +21,7 @@ https://bintray.com/dbank0208/maven/KotlinAES256Cipher/1.0.3
 #### gradle add
 
 ```ruby
-implementation 'com.dbank0208.KotlinAES256Cipher:KotlinAES256Cipher:1.0.3'
+implementation 'com.dbank0208.KotlinAES256Cipher:KotlinAES256Cipher:1.0.4'
 ```
 
 
@@ -43,7 +43,6 @@ apply plugin: 'com.android.library'-> apply plugin: 'com.android.application'
 class CipherData
 
 val buffer = StringBuilder()
-val key = UUID.randomUUID().toString()
 val keySplit = key.split("-")
 
 val ivBytes = ByteArray(16)
@@ -53,23 +52,31 @@ keySplit.forEach { buffer.append(it) }
 ```ruby
 class MainActivity : AppCompatActivity()
 
-text_view.text = CipherData().cipherData(textArray)[EnumCount.Test.number]
+text_view.text = CipherData().cipherData(textArray, key)[EnumCount.Test.number]
 ```
 
 ### The entered value is returned.
 ```ruby
-class MainActivity : AppCompatActivity()
 
-text_view.text = CipherData().cipherData(textArray)[EnumCount.Value.number]
+text_view.text = CipherData().cipherData(textArray, key)[EnumCount.Value.number]
 ```
 
-### Returns the encrypted value.
+### To encrypt
 
 ```ruby
-class MainActivity : AppCompatActivity() 
 
-CipherData().cipherData(edit_text.text.toString()) 
+ text_view.text = CipherData().encrypt(textArray,EnumCount.Decrypt.number,key)
 ```
 
+### To decrypt
+
+```ruby
+
+text_view.text = CipherData().decrypt(textArray,EnumCount.Decrypt.number,key)
+```
+
+### Encrypt and decrypt json
+CipherData().saveText(this, key, textArray)
+text_view.text = CipherData().loadText(this, key).toString()
 # GIF
-![](https://github.com/daisukenagata/KotlinAES256Cipher/blob/master/Movie.gif?raw=true)
+![](https://github.com/daisukenagata/KotlinAES256Cipher/blob/master/Movie2.gif?raw=true)
