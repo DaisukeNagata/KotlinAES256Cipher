@@ -2,7 +2,6 @@ package com.example.nagatadaisuke.aes256cipher
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.EditText
 import com.dbank.KotlinAES256Cipher.CipherData
 import com.dbank.KotlinAES256Cipher.EnumCount
 import kotlinx.android.synthetic.main.activity_main.*

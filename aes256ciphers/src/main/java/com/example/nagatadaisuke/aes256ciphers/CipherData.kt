@@ -6,7 +6,6 @@ import android.text.TextUtils
 import org.json.JSONArray
 import org.json.JSONException
 import java.util.Base64
-import java.util.UUID
 import kotlin.collections.ArrayList
 
 class CipherData() {
@@ -56,7 +55,6 @@ class CipherData() {
         keySplit.forEach { buffer.append(it) }
 
         val keyBytes = buffer.toString().toByteArray(charset("UTF-8"))
-        var base64Text: String
         var cipherData: ByteArray
 
         cipherData = AES256Cipher.decrypt(ivBytes, keyBytes, Base64.getDecoder().decode(textArray[type]))
