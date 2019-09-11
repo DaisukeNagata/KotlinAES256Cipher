@@ -12,7 +12,7 @@
  
 
  
-https://bintray.com/dbank0208/maven/KotlinAES256Cipher/1.0.4
+https://bintray.com/dbank0208/maven/KotlinAES256Cipher/1.0.9
 
 
 
