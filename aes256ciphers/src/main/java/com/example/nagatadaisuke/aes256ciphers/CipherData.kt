@@ -1,11 +1,14 @@
 package com.dbank.KotlinAES256Cipher
 
+import android.annotation.SuppressLint
 import android.content.Context
+import android.os.Build
 import android.preference.PreferenceManager
 import android.text.TextUtils
 import org.json.JSONArray
 import org.json.JSONException
 import java.util.Base64
+import java.util.Base64.getEncoder
 import kotlin.collections.ArrayList
 
 class CipherData() {
@@ -22,15 +25,22 @@ class CipherData() {
         var cipherData: ByteArray
 
         cipherData = AES256Cipher.encrypt(ivBytes, keyBytes, textArray.toString().toByteArray(charset("UTF-8")))
-        base64Text = Base64.getEncoder().encodeToString(cipherData)
-        cipherData = AES256Cipher.decrypt(ivBytes, keyBytes, Base64.getDecoder().decode(base64Text))
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            base64Text = getEncoder().encodeToString(cipherData)
+            cipherData = AES256Cipher.decrypt(ivBytes, keyBytes, Base64.getDecoder().decode(base64Text))
+        } else {
+            base64Text = android.util.Base64.encodeToString(cipherData,0)
+            cipherData = AES256Cipher.decrypt(ivBytes, keyBytes, android.util.Base64.decode(base64Text,0))
+        }
 
         val array = arrayOfNulls<String>(cipherData.size)
         textArray.toArray(array)
 
         return textArray.toArray(array)
     }
-    fun encrypt(textArray: Array<String>,type: Int, key: String): String {
+
+    fun encrypt(textArray: Array<String>, type: Int, key: String): String {
         val buffer = StringBuilder()
         val keySplit = key.split("-")
 
@@ -38,11 +48,15 @@ class CipherData() {
         keySplit.forEach { buffer.append(it) }
 
         val keyBytes = buffer.toString().toByteArray(charset("UTF-8"))
-        var base64Text: String
+        var base64Text = ""
         var cipherData: ByteArray
 
         cipherData = AES256Cipher.encrypt(ivBytes, keyBytes, textArray[type].toByteArray(charset("UTF-8")))
-        base64Text = Base64.getEncoder().encodeToString(cipherData)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            base64Text = getEncoder().encodeToString(cipherData)
+        } else {
+            base64Text = android.util.Base64.encodeToString(cipherData,0)
+        }
 
         return base64Text
     }
@@ -57,7 +71,11 @@ class CipherData() {
         val keyBytes = buffer.toString().toByteArray(charset("UTF-8"))
         var cipherData: ByteArray
 
-        cipherData = AES256Cipher.decrypt(ivBytes, keyBytes, Base64.getDecoder().decode(textArray[type]))
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            cipherData = AES256Cipher.decrypt(ivBytes, keyBytes, Base64.getDecoder().decode(textArray[type]))
+        } else {
+            cipherData = AES256Cipher.decrypt(ivBytes, keyBytes, android.util.Base64.decode(textArray[type],0))
+        }
         val cipherSt = String(cipherData)
 
         return cipherSt
