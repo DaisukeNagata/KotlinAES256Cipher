@@ -40,7 +40,7 @@ publish {
     userOrg = 'dbank0208'
     groupId = 'com.dbank0208.KotlinAES256Cipher'
     artifactId = 'KotlinAES256Cipher'
-    publishVersion = '1.0.5'
+    publishVersion = '1.0.9'
     desc = 'ciphers'
     website = 'https://github.com/daisukenagata/KotlinAES256Cipher'
 }
