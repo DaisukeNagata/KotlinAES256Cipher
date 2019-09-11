@@ -21,7 +21,7 @@ https://bintray.com/dbank0208/maven/KotlinAES256Cipher/1.0.9
 #### gradle add
 
 ```ruby
-implementation 'com.dbank0208.KotlinAES256Cipher:KotlinAES256Cipher:1.0.4'
+implementation 'com.dbank0208.KotlinAES256Cipher:KotlinAES256Cipher:1.0.9'
 ```
 
 
