@@ -7,11 +7,10 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        
     <LinearLayout
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="#dfe"
         android:gravity="center_horizontal"
         android:orientation="vertical"
@@ -23,7 +22,7 @@
         <TextView
             android:id="@+id/text_view"
             android:layout_width="369dp"
-            android:layout_height="106dp"
+            android:layout_height="140dp"
             android:gravity="center"
             android:textSize="30sp" />
 
@@ -31,7 +30,7 @@
             android:id="@+id/edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="30dp"
             android:autofillHints=""
             android:background="#ffffff"
             android:gravity="center"
@@ -41,14 +40,14 @@
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
-            android:layout_height="36dp"
+            android:layout_height="50dp"
             android:text="@string/button" />
 
         <EditText
             android:id="@+id/edit_text2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="30dp"
             android:autofillHints=""
             android:background="#ffffff"
             android:gravity="center"
@@ -58,14 +57,14 @@
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
-            android:layout_height="34dp"
+            android:layout_height="50dp"
             android:text="@string/button" />
 
         <EditText
             android:id="@+id/edit_text3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="30dp"
             android:background="#ffffff"
             android:gravity="center"
             android:hint="@string/hint"
@@ -75,20 +74,20 @@
         <Button
             android:id="@+id/button3"
             android:layout_width="wrap_content"
-            android:layout_height="37dp"
+            android:layout_height="50dp"
             android:text="@string/button" />
 
         <Button
             android:id="@+id/button4"
             android:layout_width="wrap_content"
-            android:layout_height="37dp"
+            android:layout_height="50dp"
             android:text="@string/button" />
 
         <EditText
             android:id="@+id/edit_text5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="30dp"
             android:autofillHints=""
             android:background="#ffffff"
             android:gravity="center"
@@ -96,8 +95,8 @@
             android:inputType="" />
         <Button
             android:id="@+id/button5"
-            android:layout_width="77dp"
-            android:layout_height="37dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
             android:text="@string/button" />
     </LinearLayout>
     </ScrollView>
